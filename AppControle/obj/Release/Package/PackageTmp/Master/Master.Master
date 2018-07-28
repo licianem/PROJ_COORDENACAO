@@ -1,0 +1,89 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="AppControle.Master.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Controle OASIS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/shop-item.css" rel="stylesheet">
+
+     <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    
+         
+         <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Controle de Demandas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-2" style="font-size:12px">
+          
+          <div class="list-group" style="margin-top:50px;">
+            <a href="../Paginas/Prazos.aspx" class="list-group-item">Prazos</a>
+            <a href="../Paginas/AtualizarComPlanilha.aspx" class="list-group-item">Importar Planilha</a>
+            <a href="../Paginas/DistribuirDemandas.aspx" class="list-group-item">Distribuir Projeto</a>
+			<a href="../Paginas/DistribuirSustentacao.aspx" class="list-group-item">Distribuir Sustentação</a>
+            <a href="../Paginas/Providencias.aspx" class="list-group-item">Providências</a>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+            <fieldset>
+
+          
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </fieldset>
+          </div>
+          <br />
+          <!-- /.card -->
+
+         
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" style="margin-top:10px">
+      <div class="container">
+        <p class="m-0 text-center text-white">2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    </form>
+</body>
+</html>

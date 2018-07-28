@@ -1,0 +1,75 @@
+/*!
+ * Start Bootstrap - Shop Item (https://startbootstrap.com/template-overviews/shop-item)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}a
+ Resultado{
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-radius: 5px;
+	-moz-border-radius: 5px; /* Implementação Mozilla */
+	-webkit-border-radius: 5px; /* Implementação para browsers que renderizam via webkit */
+	/*behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+    float: left;
+    padding: 5px;
+    width: 99%;
+}
+
+   .dropPadrao {
+      text-transform: none !important;
+      background-color: #ffffff !important;
+      border:1px solid #cccccc !important;
+      line-height:28px !important;
+      padding:4px 6px;
+      color:#555555;
+      border-radius:4px;
+    }
+
+.divGrid {
+    margin:10px;
+    font-size:12px;
+    width:100%;
+    
+}
+
+
+.GridResultado{
+	background-color:#f5f5f5;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+.GridResultado img{
+	border:none !important;
+}
+
+.GridResultado td{
+	padding-left:5px;
+	color: #001f42;
+}
+
+.GridResultado tr{
+	background-color: #f5f5f5;
+}
+
+.GridResultado tr:hover{
+	background-color: #dae8e8 !important;
+}
+
+.GridResultado th{
+	background-color:#e6e6e6;
+	text-align:center;
+	padding-left:5px;
+	color: #001f42;
+}
+
+
+@media (
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

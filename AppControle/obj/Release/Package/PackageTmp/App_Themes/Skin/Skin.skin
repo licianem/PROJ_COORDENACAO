@@ -1,0 +1,11 @@
+﻿<asp:GridView  
+    runat="server"
+    SkinID="SkinGrdSemPaginacaoComLinhas"
+    AllowPaging="False" 
+    EmptyDataText="Nenhum registro encontrado"
+    CssClass="GridResultado"
+    Width="100%"
+    CellPadding="4" 
+    CellSpacing="0"
+    GridLines="Both">
+</asp:GridView>
