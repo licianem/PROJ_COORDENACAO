@@ -375,11 +375,13 @@ namespace AppControle.Classes.DAO
                                     ";
 
 
+                            if (!item.ID_DEMANDA.StartsWith("304/2018"))
+                            {
+                                myCommand.CommandText = sql;
+                                myCommand.ExecuteNonQuery();
 
-                            myCommand.CommandText = sql;
-                            myCommand.ExecuteNonQuery();
-
-                            countAtualizados++;
+                                countAtualizados++;
+                            }
                         }
                     }
                     catch (Exception)
@@ -400,6 +402,36 @@ namespace AppControle.Classes.DAO
             }
             
 
+        }
+
+        public void EditarResponsavel(string idDemanda, int idRequisito, int idAnalista)
+        {
+            var connection = db.OpenConnection();
+
+            MySqlCommand myCommand = connection.CreateCommand();
+            MySqlTransaction myTrans;
+            myCommand.Connection = connection;
+
+            myCommand.Parameters.Clear();
+
+            #region Parameters
+
+            myCommand.Parameters.AddWithValue("@ID_DEMANDA", idDemanda);
+            myCommand.Parameters.AddWithValue("@ID_REQUISITO", idRequisito);
+            myCommand.Parameters.AddWithValue("@ID_ANALISTA", idAnalista);
+            #endregion
+
+
+
+            var sql = @"UPDATE TB_PRAZO
+                        SET ID_PESSOA_REQUISITO = @ID_REQUISITO,
+                              ID_PESSOA_TECNICO = @ID_ANALISTA
+                        WHERE ID_DEMANDA = @ID_DEMANDA ";
+            myCommand.CommandText = sql;
+            myCommand.ExecuteNonQuery();
+
+            connection.Close();
+         
         }
 
         public void AlocarResponsavel(string idDemanda, int idRequisito, int idAnalista)
@@ -464,7 +496,11 @@ namespace AppControle.Classes.DAO
             if(connection == null)
                 connection = db.OpenConnection();
 
-            string query = "select * from tb_oasis WHERE ID_DEMANDA = '" + numDemanda + "'";
+            string query = @"select * 
+                                from tb_oasis O 
+                                LEFT JOIN TB_PRAZO P ON P.ID_DEMANDA = O.ID_DEMANDA
+                            WHERE O.ID_DEMANDA = '" + numDemanda + @"'
+                            ";
 
             var lista = new List<TOOasis>();
 
@@ -487,6 +523,12 @@ namespace AppControle.Classes.DAO
                     to.ID_DEMANDA = dataReader["ID_DEMANDA"].ToString();
                     to.NU_PARCELA = dataReader["NU_PARCELA"].ToString();
                     to.DE_SISTEMA = dataReader["DE_SISTEMA"].ToString();
+                    try
+                    {
+                        to.ID_ANALISTA = Convert.ToInt32(dataReader["ID_PESSOA_TECNICO"]);
+                        to.ID_REQUISITOS = Convert.ToInt32(dataReader["ID_PESSOA_REQUISITO"]);
+                    }
+                    catch  { }
                     //to.ST_GARANTIA = dataReader["ST_GARANTIA"].ToString() == ""? 0 : Convert.ToInt32(dataReader["ST_GARANTIA"].ToString());
                     //to.ST_SUSTENTACAO = dataReader["ST_SUSTENTACAO"].ToString() == "" ? 0 : Convert.ToInt32(dataReader["ST_SUSTENTACAO"].ToString());
                     //to.VL_CONTAGEM_DETALHADA = Convert.ToDecimal(dataReader["VL_CONTAGEM_DETALHADA"].ToString());
@@ -609,7 +651,7 @@ namespace AppControle.Classes.DAO
                                 FROM TB_OASIS O
                                 WHERE(SELECT COUNT(*) FROM TB_PRAZO P WHERE O.ID_DEMANDA = P.ID_DEMANDA) = 0
                                 AND ST_SUSTENTACAO = "+ sustentacao.GetHashCode() + @" AND ID_DEMANDA <> '?'
-                                AND DE_SITUACAO_DEMANDA NOT IN ('Solicitação Registrada', 'Solicitação Rejeitada', 'Solicitação Devolvida p/ Ajuste', 'Solicitação Ajustada')";
+                                AND DE_SITUACAO_DEMANDA NOT IN ('Solicitação Registrada', 'Solicitação Rejeitada', 'Solicitação Devolvida p/ Ajuste', 'Solicitação Ajustada', 'Solicitação Cancelada')";
 
             if (sistema!= null && sistema.Trim() != "")
                 query += " AND DE_SISTEMA = '" + sistema +"'";
@@ -620,7 +662,14 @@ namespace AppControle.Classes.DAO
                             OR
                             UPPER(DE_SISTEMA) IN (SELECT UPPER(DE_SISTEMA) FROM tb_sistemas_atendidos)
                           )
-                        AND ID_DEMANDA NOT LIKE '115/2018%'";
+                        AND ID_DEMANDA NOT LIKE '115/2018%'
+                        AND ID_DEMANDA NOT LIKE '275/2018%' 
+                        AND ID_DEMANDA NOT LIKE '124/2018%' ";
+
+            if (sustentacao)
+            {
+                query += @" AND DE_SISTEMA not in ('PORTAL SEF','PORTAL - PUBLICAÇÕES','SGEJUC', 'SISGEPAT') ";
+            }
 
             query +="  ORDER BY DT_AUTORIZACAO DESC, ID_DEMANDA";
 

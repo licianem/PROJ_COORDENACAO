@@ -73,3 +73,41 @@ C:\Users\lsmorato\Desktop\PROJETO DE COORDENAÇÃO\SistemaDeControle\AppControle
 C:\Users\lsmorato\Desktop\PROJETO DE COORDENAÇÃO\SistemaDeControle\AppControle\obj\Release\AppControle.dll
 C:\Users\lsmorato\Desktop\PROJETO DE COORDENAÇÃO\SistemaDeControle\AppControle\obj\Release\AppControle.pdb
 C:\Users\lsmorato\Desktop\PROJETO DE COORDENAÇÃO\SistemaDeControle\AppControle\obj\Release\AppControle.csprojResolveAssemblyReference.cache
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\ApplicationInsights.config
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\csc.exe
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\vbc.exe
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\VBCSCompiler.exe
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\AppControle.dll.config
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\AppControle.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\AppControle.pdb
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\EPPlus.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.Web.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.ApplicationInsights.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\MySql.Data.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Google.Protobuf.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\EPPlus.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.Web.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.ApplicationInsights.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\bin\MySql.Data.xml
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\obj\Release\AppControle.csprojResolveAssemblyReference.cache
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\obj\Release\AppControle.dll
+C:\Users\lsmorato\Source\PESSOAL\PROJ_COORDENACAO\AppControle\obj\Release\AppControle.pdb

@@ -45,10 +45,12 @@
           
           <div class="list-group" style="margin-top:50px;">
             <a href="../Paginas/Prazos.aspx" class="list-group-item">Prazos</a>
+              <a href="../Paginas/PrazosSEFAZ.aspx" class="list-group-item">Prazos SEF</a>
             <a href="../Paginas/AtualizarComPlanilha.aspx" class="list-group-item">Importar Planilha</a>
             <a href="../Paginas/DistribuirDemandas.aspx" class="list-group-item">Distribuir Projeto</a>
 			<a href="../Paginas/DistribuirSustentacao.aspx" class="list-group-item">Distribuir Sustentação</a>
             <a href="../Paginas/Providencias.aspx" class="list-group-item">Providências</a>
+            <a href="../Paginas/AlterarResponsavel.aspx" class="list-group-item">Alterar Responsáveis</a>
           </div>
         </div>
         <!-- /.col-lg-3 -->

@@ -45,6 +45,8 @@ namespace AppControle.Classes.TO
         public string ANO_DA_FATURA { get; set; }
         public int ST_GARANTIA { get; set; }
         public string DE_PROFISSIONAL { get; set; }
+        public int ID_ANALISTA { get; set; }
+        public int ID_REQUISITOS { get; set; }
 
         public bool aux_fechamento_proposta
         {

@@ -112,7 +112,9 @@
     </Content>
     <Content Include="Paginas\DistribuirSustentacao.aspx" />
     <Content Include="Paginas\DistribuirDemandas.aspx" />
+    <Content Include="Paginas\PrazosSEFAZ.aspx" />
     <Content Include="Paginas\Prazos.aspx" />
+    <Content Include="Paginas\AlterarResponsavel.aspx" />
     <Content Include="Paginas\Providencias.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
@@ -190,12 +192,26 @@
     <Compile Include="Paginas\DistribuirDemandas.aspx.designer.cs">
       <DependentUpon>DistribuirDemandas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\PrazosSEFAZ.aspx.cs">
+      <DependentUpon>PrazosSEFAZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\PrazosSEFAZ.aspx.designer.cs">
+      <DependentUpon>PrazosSEFAZ.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Prazos.aspx.cs">
       <DependentUpon>Prazos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Prazos.aspx.designer.cs">
       <DependentUpon>Prazos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\AlterarResponsavel.aspx.cs">
+      <DependentUpon>AlterarResponsavel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\AlterarResponsavel.aspx.designer.cs">
+      <DependentUpon>AlterarResponsavel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Providencias.aspx.cs">
       <DependentUpon>Providencias.aspx</DependentUpon>

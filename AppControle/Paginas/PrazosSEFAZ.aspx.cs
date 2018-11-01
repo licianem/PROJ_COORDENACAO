@@ -13,7 +13,7 @@ using System.Configuration;
 
 namespace AppControle.Paginas
 {
-    public partial class Prazos : System.Web.UI.Page
+    public partial class PrazosSEFAZ : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,13 +43,13 @@ namespace AppControle.Paginas
             {
                 var dados = bd.RelatorioPrazosObjeto(Convert.ToInt32(ddlRequisitos.SelectedValue), Convert.ToInt32(ddlAnalistas.SelectedValue), DropDownList1.SelectedValue);
 
-                GridPropostas.DataSource = dados.Where(x => x.TemProposta && !x.TemPropostaEnviada).OrderBy(x => Convert.ToDateTime(x.PRAZO_PROPOSTA)).ToList();
+                GridPropostas.DataSource = dados.Where(x => x.TemProposta && x.TemPropostaEnviada && !x.TemAceiteProposta).OrderBy(x => Convert.ToDateTime(x.PRAZO_PROPOSTA)).ToList();
                 GridPropostas.DataBind();
 
-                GridExecucao.DataSource = dados.Where(x => x.TemAceiteProposta && x.TemPendenciaExecucaoCast).OrderBy(x => Convert.ToDateTime(x.PRAZO_PARCELA)).ToList();
+                GridExecucao.DataSource = dados.Where(x => x.TemAceiteProposta && !x.TemPendenciaExecucaoCast  && !x.TemAceitesExecucao).OrderBy(x => Convert.ToDateTime(x.PRAZO_PARCELA)).ToList();
                 GridExecucao.DataBind();
 
-                GridFecharParcela.DataSource = dados.Where(x => x.TemPendenciaFecharParcela).OrderBy(x => Convert.ToDateTime(x.PRAZO_PARCELA)).ToList();
+                GridFecharParcela.DataSource = dados.Where(x => x.TemPendenciaParcerParcelaSEF).OrderBy(x => Convert.ToDateTime(x.PRAZO_PARCELA)).ToList();
                 GridFecharParcela.DataBind();
 
                 GridTodosProjetos.DataSource = dados;

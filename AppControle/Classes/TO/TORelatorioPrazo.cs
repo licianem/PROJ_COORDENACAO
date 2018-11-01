@@ -82,8 +82,23 @@ namespace AppControle.Classes.TO
         {
             get
             {
-                if (ACEITE_PROD != "Pendente")
+                if (!TemPendenciaExecucaoCast && ACEITE_PROD != "Pendente")
                     return true;
+
+                return false;
+            }
+        }
+
+        public bool TemPendenciaExecucaoCast
+        {
+            get
+            {
+                if (TemAceiteProposta && (ENVIO_HOMOL == "Pendente"))
+                    return true;
+
+                if (TemAceiteProposta && ACEITE_HOMOL != "Pendente" && ENVIO_PROD == "Pendente")
+                    return true;
+
 
                 return false;
             }
@@ -93,13 +108,23 @@ namespace AppControle.Classes.TO
         {
             get
             {
-                if (TemAceiteProposta && (PARCELA_FECHADA == Pendente || DE_PARECER_PARCELA == Pendente))
+                if (TemAceiteProposta && PARCELA_FECHADA == Pendente)
                     return true;
 
                 return false;
             }
         }
 
-     
+        public bool TemPendenciaParcerParcelaSEF
+        {
+            get
+            {
+                if (TemAceiteProposta && !TemPendenciaFecharParcela && DE_PARECER_PARCELA == Pendente)
+                    return true;
+
+                return false;
+            }
+        }
+
     }
 }
